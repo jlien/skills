@@ -106,8 +106,8 @@ Provides strategic product direction and ensures all product decisions align wit
 
 > "Build the most intuitive project management tool for engineering teams,
 > where planning, execution, and shipping happen in a single connected workflow.
-> We win by reducing context-switching between tools and making technical
-depth visible to everyone on the team."
+> We win by reducing context-switching between tools and making technical depth
+> visible to everyone on the team."
 
 ---
 
