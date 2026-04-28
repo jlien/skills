@@ -1,3 +1,13 @@
+---
+name: hotwire
+description: >
+  Hotwire (Turbo + Stimulus) development guide — creating Stimulus controllers,
+  Turbo Frames, Turbo Streams, project-specific patterns (modals, flash messages,
+  dropdowns). Use when building interactive UI with Hotwire, creating Stimulus
+  controllers, implementing real-time updates with Turbo Streams, or debugging
+  Hotwire-related issues.
+---
+
 # Hotwire Development Guide
 
 This project uses Hotwire (Turbo + Stimulus) for interactive UI without heavy JavaScript.
