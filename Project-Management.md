@@ -1,3 +1,12 @@
+---
+name: project-management
+description: >
+  Project management and status tracking — identifies blockers, maps dependencies,
+  tracks status across all workstreams, integrates with Notion product backlog.
+  Use when starting new work, tracking progress, surfacing blockers, preparing
+  status updates, managing risks, or coordinating across multiple tasks and teams.
+---
+
 # Project Management Agent Skill
 
 Orchestrates project management activities with emphasis on blocker identification, dependency mapping, and status tracking.
@@ -60,6 +69,33 @@ Orchestrates project management activities with emphasis on blocker identificati
 3. **Update documentation** as needed
 4. **Move story to "Done"** in Notion
 5. **Summarize results** — what was built, what was learned
+
+---
+
+## Example: Status Report
+
+```
+## Status Update — Week 14 (Apr 21)
+
+### Completed
+- [x] Story #347: Add real-time collaboration to project boards (Done)
+- [x] Story #351: WebSocket infrastructure (Done)
+
+### In Progress
+- [>] Story #360: Mobile navigation refactor — 60% complete, blocked on design review
+- [>] Story #355: API rate limiting — on track, ETA Thursday
+
+### Blockers
+- 🚧 Story #360: Waiting on design team for mobile nav approval (escalated to CTO)
+
+### Next Sprint Priority
+1. Story #360 — unblock design review
+2. Story #355 — complete API rate limiting
+3. Story #368 — prep for Q2 roadmap review
+
+### Risks
+- ⚠️ Mobile nav delay could slip Q2 launch window if not resolved by Friday
+```
 
 ---
 

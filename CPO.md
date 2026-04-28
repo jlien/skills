@@ -1,3 +1,13 @@
+---
+name: cpo
+description: >
+  Strategic product leadership — defines product vision, evaluates features,
+  sets priorities, aligns engineering/design/sales around product goals. Use
+  when making strategic product decisions, reviewing features for strategic
+  fit, setting roadmap priorities, resolving cross-functional tradeoffs, or
+  defining success metrics for initiatives.
+---
+
 # CPO Agent Skill - Chief Product Officer
 
 Provides strategic product direction and ensures all product decisions align with company goals and market opportunity.
@@ -75,6 +85,29 @@ Provides strategic product direction and ensures all product decisions align wit
 - Understand competitive threats
 - Align on enablement and training needs
 - Prioritize based on revenue impact
+
+---
+
+## Example: Feature Evaluation
+
+**Feature:** Add real-time collaboration to project boards
+
+**Strategic Alignment:** ✅ Advances vision of collaborative product workflow
+**Customer Value:** Solves friction for teams that need live sync on planning
+**Business Impact:** Could unlock enterprise tier; 15% increase in team adoption
+**Feasibility:** Requires WebSockets + conflict resolution; ~3 sprint weeks
+**Differentiation:** Competitors use async-only boards — live sync is a moat
+
+**Decision:** Green light — builds strategic advantage and unlocks enterprise tier.
+
+---
+
+## Example: Product Vision Statement
+
+> "Build the most intuitive project management tool for engineering teams,
+> where planning, execution, and shipping happen in a single connected workflow.
+> We win by reducing context-switching between tools and making technical
+depth visible to everyone on the team."
 
 ---
 

@@ -1,3 +1,13 @@
+---
+name: ruby-on-rails
+description: >
+  Rails development execution — plan mode, BDD bug fixes, subagent orchestration,
+  atomic commits, automatic code review. Orchestrates principal-engineer-level
+  Rails work with Hotwire, Tailwind, RSpec, Rubocop. Use when implementing
+  Rails features, fixing bugs, running code reviews, refactoring Rails code,
+  seeding databases, or any non-trivial Rails development task.
+---
+
 # Ruby on Rails Agent Skill
 
 Orchestrates Rails development with extensive planning, principal engineer level execution (BDD + implementation), and proactive code review.
@@ -91,7 +101,7 @@ Orchestrates Rails development with extensive planning, principal engineer level
    - Check the story file for acceptance criteria and phases
    - Mark completed items with `[x]` as you finish them
    - Add completion dates to phase headers when done
-9. **Code Review (Automatic)**: After implementation and tests pass, **always** run the code review agent using `code-review.md` skill — do NOT wait for the user to ask. Write findings to `tasks/` and address any issues before presenting the work as complete.
+9. **Code Review (Automatic)**: After implementation and tests pass, **always** run the code review agent using `Code-Review.md` skill — do NOT wait for the user to ask. Write findings to `tasks/` and address any issues before presenting the work as complete.
 
 ---
 
@@ -111,7 +121,6 @@ Orchestrates Rails development with extensive planning, principal engineer level
 
 Detailed guides for specific technologies:
 
-- **`code-review.md`** — Code review process. **MUST** run automatically after implementation — do not wait for the user to request it.
-- **`hotwire.md`** — Stimulus controllers, Turbo Frames/Streams, registration in application.js. Use this skill for any Turbo/Stimulus work.
-- **`../notion/SKILL.md`** — Notion API via curl (auth + generic operations)
-- **`../notion/product-backlog.md`** — Product Backlog database schema and story workflow transitions
+- **`Code-Review.md`** — Code review process. **MUST** run automatically after implementation — do not wait for the user to request it.
+- **`hotwire.md`** (in this directory) — Stimulus controllers, Turbo Frames/Streams, registration in application.js
+- **`Notion.md`** — Notion API via curl for Product Backlog management (search, status updates, create pages)

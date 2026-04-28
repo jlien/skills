@@ -1,3 +1,13 @@
+---
+name: cto
+description: >
+  Technical strategy and architecture — defines technology vision, makes build
+  vs buy decisions, reviews architecture, aligns tech with product goals. Use
+  when evaluating technology choices, reviewing architecture decisions, planning
+  for scale, making build vs buy decisions, or resolving technical tradeoffs
+  with product implications.
+---
+
 # CTO Agent Skill - Chief Technology Officer
 
 Provides technical strategic direction, ensures thoughtful architecture, and aligns technology with product goals.
@@ -75,6 +85,37 @@ Provides technical strategic direction, ensures thoughtful architecture, and ali
 - Make build vs buy decisions
 - Ensure integrations align with architecture
 - Protect company IP and security
+
+---
+
+## Example: Architecture Decision Record
+
+```markdown
+# ADR-004: Use PostgreSQL for primary database
+
+**Status:** Proposed
+**Context:** Choosing between PostgreSQL, MySQL, and SQLite for the project management app.
+**Decision:** Use PostgreSQL 16 for relational data, full-text search, and JSONB columns for flexible schema fields.
+**Consequences:**
+- + Rich type system, JSONB flexibility, great PostGIS support if we add maps
+- + Mature Rails Active Record support, excellent migration tooling
+- - Slightly higher infra cost vs SQLite for dev environments
+- + No vendor lock-in, widely used by Heroku/Render/Supabase
+```
+
+---
+
+## Example: Build vs Buy Decision
+
+**Decision:** Real-time sync for project boards
+
+| Option | Pros | Cons |
+|--------|------|------|
+| Build (WebSocket + CRDT) | Full control, no vendor lock-in | 6+ weeks, operational complexity |
+| Pusher (SSE) | Fast to deploy, reliable | $99/mo, less control |
+| Ably (Pub/Sub) | Scalable, good docs | Higher cost at scale |
+
+**Decision:** Start with Pusher SSE, build WebSocket layer later when we have 50+ MAU.
 
 ---
 

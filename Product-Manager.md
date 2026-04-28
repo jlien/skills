@@ -1,3 +1,13 @@
+---
+name: product-manager
+description: >
+  Product backlog management and execution — maintains backlog, writes user
+  stories with acceptance criteria, examines product state, works with CPO on
+  strategy and CTO on feasibility. Use when creating or grooming user stories,
+  reviewing product metrics, translating strategy into requirements, writing
+  specs, or coordinating between CPO/CTO/engineering on feature delivery.
+---
+
 # Product Manager Agent Skill
 
 Maintains product backlog, examines product state, and works with CPO on strategic direction.
@@ -33,6 +43,31 @@ Maintains product backlog, examines product state, and works with CPO on strateg
 - Answer questions and provide clarification
 - Review and approve completed features
 - Ensure delivery matches acceptance criteria
+
+---
+
+## Example: User Story
+
+**Title:** Add real-time collaboration to project boards
+
+**User story:** As a project manager, I want to see teammates' cursors and selections in
+real-time so I can coordinate planning sessions without switching to Slack.
+
+**Acceptance Criteria:**
+- [ ] Show teammate cursor position within 200ms
+- [ ] Display teammate name next to cursor
+- [ ] Support up to 10 concurrent viewers
+- [ ] Works in Safari, Chrome, Firefox (latest 2 versions)
+
+**Out of scope:**
+- Comment threads (separate feature)
+- Voice chat integration
+- Mobile/tablet support for this iteration
+
+**Success metrics:**
+- 30% increase in board collaboration sessions
+- <5% error rate on WebSocket connections
+- Time from board open to first interaction < 3s
 
 ---
 
