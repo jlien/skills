@@ -1,3 +1,13 @@
+---
+name: ruby-on-rails
+description: >
+  Rails development execution — plan mode, BDD bug fixes, subagent orchestration,
+  atomic commits, automatic code review. Orchestrates principal-engineer-level
+  Rails work with Hotwire, Tailwind, RSpec, Rubocop. Use when implementing
+  Rails features, fixing bugs, running code reviews, refactoring Rails code,
+  seeding databases, or any non-trivial Rails development task.
+---
+
 # Ruby on Rails Agent Skill
 
 Orchestrates Rails development with extensive planning, principal engineer level execution (BDD + implementation), and proactive code review.
