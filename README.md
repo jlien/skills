@@ -15,6 +15,10 @@ This repository contains specialized agent skills for various roles and workflow
 - **CTO.md** - Chief Technology Officer: technical strategy, architecture, and team leadership
 - **Product-Manager.md** - Product backlog management, requirements, and execution
 
+### Agent Workflow
+
+- **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
+
 ## Usage
 
 These skills are designed to be read by AI agents to understand role-specific responsibilities, workflows, and best practices. Each skill provides:
