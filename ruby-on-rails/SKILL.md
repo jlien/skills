@@ -122,4 +122,6 @@ Detailed guides for specific technologies:
 
 - **`Code-Review.md`** — Code review process. **MUST** run automatically after implementation — do not wait for the user to request it.
 - **`hotwire.md`** (in this directory) — Stimulus controllers, Turbo Frames/Streams, registration in application.js
+- **`stimulus.md`** (in this directory) — Advanced Stimulus patterns: lifecycle hooks, controller composition via outlets, nested controllers, form patterns, testing, performance. For basics see `hotwire.md`.
+- **`view-component.md`** (in this directory) — ViewComponent gem: file layout, slots, sidecar assets, variants/sizes, Stimulus integration, preview/Lookbook, testing. Implements the contracts in the top-level `design-system/` skill.
 - **`Notion.md`** — Notion API via curl for Product Backlog management (search, status updates, create pages)

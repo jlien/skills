@@ -15,6 +15,11 @@ This repository contains specialized agent skills for various roles and workflow
 - **CTO.md** - Chief Technology Officer: technical strategy, architecture, and team leadership
 - **Product-Manager.md** - Product backlog management, requirements, and execution
 
+### Frontend & Design
+
+- **design-system/** - Design tokens, component API conventions, accessibility baselines, and Tailwind mapping (framework-agnostic; basis for the Rails ViewComponent skill)
+- **tailwind/** - Tailwind CSS configuration, customization, composition patterns, and common pitfalls
+
 ### Agent Workflow
 
 - **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
