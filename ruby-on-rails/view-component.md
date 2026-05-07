@@ -14,9 +14,9 @@ description: >
 
 ViewComponent (the gem: `gem "view_component"`) gives Rails a real component model — a class + template pair you can instantiate, test, and document in isolation. This is the implementation layer for the design system; it is **not** the design contract.
 
-- For *what tokens to use, what variants/sizes/slots a component should expose, and what accessibility floor to meet*, read `design-system/SKILL.md`. That skill is the spec.
-- For *Tailwind config, semantic colors, `@apply` rules*, see `tailwind/SKILL.md`.
-- For *Stimulus controllers wired to component markup*, see `hotwire.md` (basics) and `stimulus.md` (advanced).
+- Tokens, variants/sizes/slots, and the accessibility floor — read `design-system/SKILL.md`. That skill is the spec.
+- Tailwind config, semantic colors, `@apply` rules — see `tailwind/SKILL.md`.
+- Stimulus controllers wired to component markup — see `hotwire.md` (basics) and `stimulus.md` (advanced).
 
 This skill assumes you have those open. It covers the Rails-specific implementation patterns only.
 
@@ -116,7 +116,7 @@ end
 
 Two contracts shown above:
 1. **Variants and sizes are validated in `initialize`** — fail loudly if a caller passes garbage.
-2. **`**html_options` passthrough** — callers add arbitrary attributes (`id`, `data-*`, `aria-*`) without a prop explosion.
+2. **`**html_options` passthrough.** Callers add arbitrary attributes (`id`, `data-*`, `aria-*`) without a prop explosion.
 
 ---
 

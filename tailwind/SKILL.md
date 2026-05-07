@@ -14,7 +14,7 @@ description: >
 
 Utility-first CSS. The whole stylesheet is composed of single-purpose classes; you compose layouts in markup.
 
-This skill covers Tailwind itself. For *what tokens to define* and *how to design a system on top of Tailwind*, see `design-system/SKILL.md`.
+This skill covers Tailwind itself. For token decisions and design-system structure on top of Tailwind, see `design-system/SKILL.md`.
 
 ---
 

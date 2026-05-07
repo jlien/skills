@@ -15,7 +15,7 @@ description: >
 
 A design system is the contract between design intent and shipped UI. It exists so engineers don't have to make taste decisions in the middle of building features, and so the visual language stays consistent as the team grows.
 
-This skill is **framework-agnostic**. It defines tokens, naming, and component conventions. For how to *implement* tokens in CSS, see `tailwind/SKILL.md`. For Rails-specific component implementations, see `ruby-on-rails/view-component.md`, which consumes the contracts defined here.
+This skill is **framework-agnostic**. It defines tokens, naming, and component conventions. For implementing tokens in CSS, see `tailwind/SKILL.md`. For Rails-specific component implementations, see `ruby-on-rails/view-component.md`, which consumes the contracts defined here.
 
 ---
 
@@ -163,7 +163,7 @@ A component's API IS its design contract. Bad APIs metastasize; good ones constr
 
 ### Variants
 
-Variants are **mutually exclusive states** of the same component. `<Button variant="primary | secondary | ghost | danger" />`. Reach for variants when the component plays a different *role*, not when it has a different *size*.
+Variants are **mutually exclusive states** of the same component. `<Button variant="primary | secondary | ghost | danger" />`. Reach for variants when the component plays a different role, not when it has a different size.
 
 Don't pile variants past ~5. If you need more, you have multiple components masquerading as one.
 
