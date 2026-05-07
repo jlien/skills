@@ -94,8 +94,7 @@ Orchestrates Rails development with extensive planning, principal engineer level
 6. **Capture Lessons**: Update `tasks/lessons.md` after corrections
 7. **Update Documentation**: When a new feature is complete, update `app/content/help/` docs:
    - `help-center.md` — Main user guide (served at /help)
-   - `feature-comparison.md` — If it affects Free vs Plus
-   - `coach-onboarding.md` / `athlete-onboarding.md` — If it affects coaching flow
+   - `feature-comparison.md` — How do features change at different pricing levels (if applicable)
    - `support-troubleshooting.md` — Add common issues for the new feature
 8. **Update Story Progress**: When working on features from `planning/` stories:
    - Check the story file for acceptance criteria and phases
