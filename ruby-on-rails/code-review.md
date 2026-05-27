@@ -219,7 +219,7 @@ results = posts.select(&:published?).map(&:title)
 - [ ] Multi-step DB operations wrapped in `transaction` blocks
 - [ ] Turbo Stream broadcasts extracted to background jobs where appropriate
 - [ ] Each Stimulus controller focuses on one behavior
-- [ ] Test coverage exists for new/refactored code (model specs, request specs)
+- [ ] Test coverage exists for new/refactored code (model specs, request specs); SimpleCov stays ≥ 90% and the change doesn't lower the project's percentage
 - [ ] Concerns are cohesive (not "junk drawer" modules)
 
 **Example — Extract Concern:**
