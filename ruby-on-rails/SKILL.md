@@ -145,7 +145,20 @@ end
 - `enable_coverage :branch` catches untested conditional paths that line coverage alone misses.
 - `minimum_coverage` makes the suite exit non-zero below the threshold — wire this into CI so coverage regressions block merges.
 - Add `coverage/` to `.gitignore`.
-- Use coverage to find gaps, not to chase 100% — don't write tests for trivial accessors just to hit a number. The BDD bug-fix flow (section 6) is the source of truth for *what* to test.
+- Use coverage to find gaps, not to chase 100% — don't write tests for trivial accessors just to hit a number. The BDD bug-fix flow (section 6) is the source of truth for what to test.
+
+---
+
+## CI Gates
+
+Every push and pull request must pass these gates before merge. A failing gate blocks the merge — never override or skip one to land work faster.
+
+**Required checks** (each must exit non-zero on failure so CI fails):
+- **Test runner** — `bundle exec rspec`. The full suite must be green.
+- **Coverage** — SimpleCov's `minimum_coverage` (≥ 90% line, 80% branch). Runs as part of RSpec, so a coverage drop fails the test step.
+- **Linting** — `bundle exec rubocop`. No offenses; use `rubocop -a` locally before pushing, not `--auto-gen-config` to mask them.
+
+When setting up a new project, add a CI workflow (e.g. `.github/workflows/ci.yml`) that runs these on every PR and marks them as required status checks on the protected branch. If a gate is failing on CI, fix the root cause — do not disable the check, loosen the threshold, or add blanket `rubocop:disable` comments.
 
 ---
 
