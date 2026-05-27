@@ -111,8 +111,41 @@ Orchestrates Rails development with extensive planning, principal engineer level
 - **Tailwind CSS v4** — Utility-first styling
 - **PostgreSQL** — Primary database
 - **RSpec** — Testing framework
+- **SimpleCov** — Test coverage measurement (min 90% line coverage)
 - **SortableJS** — Drag-and-drop (via Stimulus)
 - **Rubocop** — Style and Linting
+
+---
+
+## Test Coverage (SimpleCov)
+
+Coverage is measured with SimpleCov on every test run. Treat the threshold as a gate, not a target — drops below it fail the suite.
+
+**Standard:** Minimum **90% line coverage**. New and refactored code should not lower the project's coverage percentage.
+
+**Setup** — add to the `:test` group in the `Gemfile`:
+```ruby
+group :test do
+  gem "simplecov", require: false
+end
+```
+
+SimpleCov must start **before any application code loads**, so require it at the very top of `spec/rails_helper.rb` (above `require File.expand_path(...)`):
+```ruby
+require "simplecov"
+SimpleCov.start "rails" do
+  add_filter "/spec/"
+  add_filter "/config/"
+  add_filter "/vendor/"
+  enable_coverage :branch
+  minimum_coverage line: 90, branch: 80
+end
+```
+
+- `enable_coverage :branch` catches untested conditional paths that line coverage alone misses.
+- `minimum_coverage` makes the suite exit non-zero below the threshold — wire this into CI so coverage regressions block merges.
+- Add `coverage/` to `.gitignore`.
+- Use coverage to find gaps, not to chase 100% — don't write tests for trivial accessors just to hit a number. The BDD bug-fix flow (section 6) is the source of truth for *what* to test.
 
 ---
 
