@@ -20,6 +20,11 @@ This repository contains specialized agent skills for various roles and workflow
 - **design-system/** - Design tokens, component API conventions, accessibility baselines, and Tailwind mapping (framework-agnostic; basis for the Rails ViewComponent skill)
 - **tailwind/** - Tailwind CSS configuration, customization, composition patterns, and common pitfalls
 
+### Marketing & Growth
+
+- **seo/** - Technical & on-page SEO: metadata, canonicals, sitemaps/robots, JSON-LD structured data (incl. video), Core Web Vitals, and internal linking
+- **aio/** - AI / answer-engine optimization: get cited by ChatGPT, Perplexity & Google AI Overviews via extractable answer blocks, `FAQPage` schema, `llms.txt`, and a deliberate AI-crawler policy
+
 ### Agent Workflow
 
 - **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
