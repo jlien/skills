@@ -14,6 +14,7 @@ Make a site's pages discoverable, crawlable, and rich-result-eligible in classic
 - Surface page content as crawlable text (transcripts, captions, descriptions)
 - Protect Core Web Vitals (LCP, CLS, INP) and mobile usability
 - Build internal linking so crawl depth stays shallow and equity flows
+- Support off-page authority via link building (see `backlinks` and `link-building-strategy` sub-skills)
 
 ## Workflows
 
@@ -76,7 +77,8 @@ Output a gap list ranked by impact.
 
 - **`content-brief` skill** — owns the *words* (answer blocks, PAA-mapped H2s, EEAT). This skill owns the *markup and infrastructure* that make those words eligible for rich results. Hand off: content-brief produces the copy; SEO wraps it in title/description/schema.
 - **`aio` skill** — shares the JSON-LD plumbing. SEO adds `VideoObject`/`Article`; AIO adds `FAQPage`/`llms.txt`/crawler policy on top. Do them in one batch when possible.
-- **`skyscraper-approach` skill** — supplies the off-page/backlink half; this skill ensures the superior page is technically flawless so it can actually outrank.
+- **`backlinks` skill** — supplies the off-page half of SEO. This technical SEO skill makes pages linkable; the backlinks skill supplies the source database and outreach playbook to acquire those links.
+- **`link-building-strategy` skill** — execution arm for link acquisition. SEO ensures the landing page is technically flawless; the strategy skill provides the outreach scripts and campaign frameworks.
 - **`ruby-on-rails` skill** — implements the routes, helpers, and views; SEO supplies the spec (which tags, which schema, which routes need a sitemap entry).
 
 ## Key Principles
