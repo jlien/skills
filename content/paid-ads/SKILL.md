@@ -14,7 +14,6 @@ metadata:
 
 A minimal, repeatable paid ads framework for SaaS: stop overcomplicating, focus on bottom-of-funnel keywords, test creative volume, and measure ROI by CAC vs customer lifetime value.
 
-Source: https://x.com/jimmylien/status/1934752341234567890
 
 ## Core Principles
 
