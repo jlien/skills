@@ -15,7 +15,7 @@ Make a site's pages discoverable, crawlable, and rich-result-eligible in classic
 - Protect Core Web Vitals (LCP, CLS, INP) and mobile usability
 - Build internal linking so crawl depth stays shallow and equity flows
 - Support off-page authority via link building (see `backlinks` and `link-building-strategy` sub-skills)
-- Diagnose and fix technical SEO edge cases — parameter handling, JS rendering, infinite scroll, mixed content, tracking params, charset issues (see `technical-edge-cases` sub-skill)
+
 
 ## Workflows
 
