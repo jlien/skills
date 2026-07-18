@@ -15,6 +15,7 @@ Make a site's pages discoverable, crawlable, and rich-result-eligible in classic
 - Protect Core Web Vitals (LCP, CLS, INP) and mobile usability
 - Build internal linking so crawl depth stays shallow and equity flows
 - Support off-page authority via link building (see `backlinks` and `link-building-strategy` sub-skills)
+- Diagnose and fix technical SEO edge cases — parameter handling, JS rendering, infinite scroll, mixed content, tracking params, charset issues (see `technical-edge-cases` sub-skill)
 
 ## Workflows
 
@@ -30,6 +31,8 @@ Inventory what exists before adding anything:
 - Content depth: is the page's substance locked in images/video/JS, invisible to crawlers?
 
 Output a gap list ranked by impact.
+
+**Also check edge cases** — if rankings are flat despite standard SEO fixes, run the `technical-edge-cases` sub-skill audit: GSC URL Parameters, URL Inspection (compare Original vs. Rendered HTML), Coverage report for indexation gaps, Chrome DevTools Security tab for mixed content, and charset verification.
 
 ### Phase 2: Foundational fixes (Tier 1 — highest ROI)
 
@@ -80,6 +83,7 @@ Output a gap list ranked by impact.
 - **`backlinks` skill** — supplies the off-page half of SEO. This technical SEO skill makes pages linkable; the backlinks skill supplies the source database and outreach playbook to acquire those links.
 - **`link-building-strategy` skill** — execution arm for link acquisition. SEO ensures the landing page is technically flawless; the strategy skill provides the outreach scripts and campaign frameworks.
 - **`ruby-on-rails` skill** — implements the routes, helpers, and views; SEO supplies the spec (which tags, which schema, which routes need a sitemap entry).
+- **`technical-edge-cases` sub-skill** — companion for edge case audits. Run after the standard SEO audit if rankings are flat. Covers parameter handling, JS rendering, infinite scroll, mixed content, tracking params, and charset issues.
 
 ## Key Principles
 
