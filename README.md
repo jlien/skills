@@ -30,7 +30,7 @@ This repository contains specialized agent skills for various roles and workflow
 
 ### Agent Workflow
 
-- **Agent-Writing-System.md** - Orwell's six rules from "Politics and the English Language" (1946): short words, active voice, cut the fluff, fresh language, plain English. Paste into CLAUDE.md / AGENTS.md for instant writing quality.
+- **SOUL.md** - Operating contract for autonomous agents (Tony Simons): stance, accountability, pushback, autonomy, mission, tone, and writing system. Incorporates Orwell's six rules from "Politics and the English Language" (1946) for public-facing writing.
 - **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
 
 ## Usage
