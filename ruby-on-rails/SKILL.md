@@ -100,7 +100,8 @@ Orchestrates Rails development with extensive planning, principal engineer level
    - Check the story file for acceptance criteria and phases
    - Mark completed items with `[x]` as you finish them
    - Add completion dates to phase headers when done
-9. **Code Review (Automatic)**: After implementation and tests pass, **always** run the code review agent using `Code-Review.md` skill — do NOT wait for the user to ask. Write findings to `tasks/` and address any issues before presenting the work as complete.
+9. **Code Review (Automatic)**: After implementation and tests pass, **always** run the code review agent using `Code-Review.md` skill — do NOT wait for the user to ask. Write findings to `tasks/` and address any issues before presenting the work as complete. When several candidate implementations are on the table (e.g. alternative approaches to a fix, or your fix vs a reference), rank them with the `llm-as-a-verifier` skill (`select`/`compare`) instead of eyeballing — the fine-grained, tie-free preference beats a subjective call. For long multi-step refactors, use `track` to score progress per step and catch off-course trajectories early.
+10. **Verification Scoring on Long Tasks**: For refactors or feature work spanning many steps, apply the `llm-as-a-verifier` `track` API to the step sequence — a stagnating progress score is an early warning the implementation drifted from spec.
 
 ---
 
@@ -167,6 +168,7 @@ When setting up a new project, add a CI workflow (e.g. `.github/workflows/ci.yml
 Detailed guides for specific technologies:
 
 - **`Code-Review.md`** — Code review process. **MUST** run automatically after implementation — do not wait for the user to request it.
+- **`llm-as-a-verifier/`** (this directory) — Continuous, probabilistic verification: `select` best-of-N, `compare` pairs, `track` progress. Used by steps 9-10 above to rank candidate implementations and monitor long refactors.
 - **`hotwire.md`** (in this directory) — Stimulus controllers, Turbo Frames/Streams, registration in application.js
 - **`stimulus.md`** (in this directory) — Advanced Stimulus patterns: lifecycle hooks, controller composition via outlets, nested controllers, form patterns, testing, performance. For basics see `hotwire.md`.
 - **`view-component.md`** (in this directory) — ViewComponent gem: file layout, slots, sidecar assets, variants/sizes, Stimulus integration, preview/Lookbook, testing. Implements the contracts in the top-level `design-system/` skill.
