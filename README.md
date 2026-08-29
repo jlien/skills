@@ -29,6 +29,7 @@ This repository contains specialized agent skills for various roles and workflow
 - **seo/indexing-and-freshness.md** - Faster discovery/recrawl: IndexNow (Bing/Yandex — Google isn't a participant), why the sitemap-ping and general Indexing API are dead, honest sitemap `lastmod` (incl. section indexes), and video sitemaps (`<video:video>`)
 - **seo/thin-page-audit.md** - Why pages get crawled but not indexed ("Crawled/Discovered – currently not indexed"): sample live pages, measure per-template main-content words + unique-text coverage, and thicken thin templates (transcripts, FAQ, unique prose); GSC Pages report as ground truth
 - **content/paid-ads/** - SaaS paid ads framework: Google Ads bottom-of-funnel keyword + phrase match bidding, Facebook Ads 20-creative/week testing cycle, landing page matching, and ROI measured by CAC vs LTV
+- **content/llm-artifact-sweep/** - QA sweep for LLM-generated copy before it ships: regex artifact patterns (instruction leakage, placeholders, doubled words, truncation), language-bleed checks, a full read of the rendered page, and a post-deploy re-sweep of the live URL
 - **pagespeed/** - Run PageSpeed Insights / Lighthouse, read field (CrUX) Core Web Vitals before lab scores, and turn the results into a ranked fix list — with a companion `audit-triage.md` catalog that separates real, first-party, metric-moving findings from third-party / already-passing / negligible noise
 
 ### Agent Workflow
