@@ -26,11 +26,17 @@ This repository contains specialized agent skills for various roles and workflow
 - **aio/** - AI / answer-engine optimization: get cited by ChatGPT, Perplexity & Google AI Overviews via extractable answer blocks, `FAQPage` schema, `llms.txt`, and a deliberate AI-crawler policy
 - **seo/backlinks.md** - Top 50 high-quality backlink sources organized by tier (editorial/media, Web 2.0, document sharing, image/video, bookmarking, business/directory), with DA scores, dofollow status, and best-use guidance
 - **seo/link-building-strategy.md** - Tactical execution playbook: broken link building (Moving Man Method), digital PR with localized data, guest posting for the Citation Core, unlinked brand mentions, outreach templates, and case studies
+- **seo/indexing-and-freshness.md** - Faster discovery/recrawl: IndexNow (Bing/Yandex — Google isn't a participant), why the sitemap-ping and general Indexing API are dead, honest sitemap `lastmod` (incl. section indexes), and video sitemaps (`<video:video>`)
+- **seo/thin-page-audit.md** - Why pages get crawled but not indexed ("Crawled/Discovered – currently not indexed"): sample live pages, measure per-template main-content words + unique-text coverage, and thicken thin templates (transcripts, FAQ, unique prose); GSC Pages report as ground truth
+- **content/paid-ads/** - SaaS paid ads framework: Google Ads bottom-of-funnel keyword + phrase match bidding, Facebook Ads 20-creative/week testing cycle, landing page matching, and ROI measured by CAC vs LTV
 - **content/llm-artifact-sweep/** - QA sweep for LLM-generated copy before it ships: regex artifact patterns (instruction leakage, placeholders, doubled words, truncation), language-bleed checks, a full read of the rendered page, and a post-deploy re-sweep of the live URL
+- **pagespeed/** - Run PageSpeed Insights / Lighthouse, read field (CrUX) Core Web Vitals before lab scores, and turn the results into a ranked fix list — with a companion `audit-triage.md` catalog that separates real, first-party, metric-moving findings from third-party / already-passing / negligible noise
 
 ### Agent Workflow
 
+- **Agent-Writing-System.md** - Orwell's six rules from "Politics and the English Language" (1946): short words, active voice, cut the fluff, fresh language, plain English. Paste into CLAUDE.md / AGENTS.md for instant writing quality.
 - **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
+- **llm-as-a-verifier/** - Verification as a scaling axis: continuous, probabilistic scoring (`select` best-of-N, `compare` pairs, `track` progress) replaces coarse 1-5 judging; used to rank candidate implementations and monitor long refactors (arXiv 2607.05391)
 
 ## Usage
 
