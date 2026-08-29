@@ -26,6 +26,7 @@ This repository contains specialized agent skills for various roles and workflow
 - **aio/** - AI / answer-engine optimization: get cited by ChatGPT, Perplexity & Google AI Overviews via extractable answer blocks, `FAQPage` schema, `llms.txt`, and a deliberate AI-crawler policy
 - **seo/backlinks.md** - Top 50 high-quality backlink sources organized by tier (editorial/media, Web 2.0, document sharing, image/video, bookmarking, business/directory), with DA scores, dofollow status, and best-use guidance
 - **seo/link-building-strategy.md** - Tactical execution playbook: broken link building (Moving Man Method), digital PR with localized data, guest posting for the Citation Core, unlinked brand mentions, outreach templates, and case studies
+- **content/llm-artifact-sweep/** - QA sweep for LLM-generated copy before it ships: regex artifact patterns (instruction leakage, placeholders, doubled words, truncation), language-bleed checks, a full read of the rendered page, and a post-deploy re-sweep of the live URL
 
 ### Agent Workflow
 
