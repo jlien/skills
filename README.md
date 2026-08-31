@@ -24,6 +24,7 @@ This repository contains specialized agent skills for various roles and workflow
 
 - **seo/** - Technical & on-page SEO: metadata, canonicals, sitemaps/robots, JSON-LD structured data (incl. video), Core Web Vitals, and internal linking
 - **aio/** - AI / answer-engine optimization: get cited by ChatGPT, Perplexity & Google AI Overviews via extractable answer blocks, `FAQPage` schema, `llms.txt`, and a deliberate AI-crawler policy
+- **aio/measurement.md** - Measure AI visibility (the tracking counterpart to aio): AI referral traffic in GA4, a prompt-panel harness for citation-rate & share-of-voice across web-enabled models, AI-crawler log coverage, and GSC as a proxy — with a runnable Perplexity-first panel script
 - **seo/backlinks.md** - Top 50 high-quality backlink sources organized by tier (editorial/media, Web 2.0, document sharing, image/video, bookmarking, business/directory), with DA scores, dofollow status, and best-use guidance
 - **seo/link-building-strategy.md** - Tactical execution playbook: broken link building (Moving Man Method), digital PR with localized data, guest posting for the Citation Core, unlinked brand mentions, outreach templates, and case studies
 - **content/paid-ads/** - SaaS paid ads framework: Google Ads bottom-of-funnel keyword + phrase match bidding, Facebook Ads 20-creative/week testing cycle, landing page matching, and ROI measured by CAC vs LTV
