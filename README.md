@@ -38,6 +38,10 @@ This repository contains specialized agent skills for various roles and workflow
 - **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
 - **llm-as-a-verifier/** - Verification as a scaling axis: continuous, probabilistic scoring (`select` best-of-N, `compare` pairs, `track` progress) replaces coarse 1-5 judging; used to rank candidate implementations and monitor long refactors (arXiv 2607.05391)
 
+### 3D Printing
+
+- **3d-printing/** - Programmatic mesh CAD without CAD software: parse STL/3MF, measure real geometry in a derived design frame, build mating parts (flanges, enclosures, bolt bosses) with trimesh + manifold3d booleans, verify by numeric clash checks before handoff. Includes `case-study-rack-enclosure.md` (3-iteration bolt-down tub build with iteration log) and `destaco-rack-reference.md` (measured geometry of the rack the case study used, for future lid/panel work).
+
 ## Usage
 
 These skills are designed to be read by AI agents to understand role-specific responsibilities, workflows, and best practices. Each skill provides:
