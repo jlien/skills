@@ -19,10 +19,11 @@
   cron that runs `bin/kofuku-produce` gets the deterministic vision judge even
   when nobody exported the var, while a shell-invoked `bin/kofuku-qa` in the
   same hour doesn't. The two runtimes judge with different eyes.
-- (Being fixed via delegated PR: `bin/kofuku-qa` is gaining a `bin/lib/env.sh`
-  helper that loads only these two vars from the repo `.env`, exported shell
-  values winning — after which path selection no longer depends on who
-  exported what.)
+- FIXED (jlien/kofuku PR #287, merged 2026-09-04): `bin/kofuku-qa` sources a
+  `bin/lib/env.sh` helper that loads only these two vars from the repo `.env`
+  (exported shell values winning) — path selection no longer depends on who
+  exported what; a supported workaround survives on older trees
+  (`set -a; source .env; set +a` before invoking).
 
 ## Pre-flight before trusting either vision key
 
