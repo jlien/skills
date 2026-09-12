@@ -96,6 +96,7 @@ Orchestrates Rails development with extensive planning, principal engineer level
    - `help-center.md` — Main user guide (served at /help)
    - `feature-comparison.md` — How do features change at different pricing levels (if applicable)
    - `support-troubleshooting.md` — Add common issues for the new feature
+   If the project's product-manager skill names **public operator docs** (API/CLI/MCP), update those files in the same change whenever the story matrix has API, CLI, or MCP as **In**. Clubkeeper: `.grok/skills/clubkeeper-product-manager/SKILL.md` "Public operator docs".
 8. **Update Story Progress**: When working on features from `planning/` stories:
    - Check the story file for acceptance criteria and phases
    - Mark completed items with `[x]` as you finish them
