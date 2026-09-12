@@ -57,6 +57,7 @@ Orchestrates Rails development with extensive planning, principal engineer level
 - Subagents prove the fix by making the test pass
 - This ensures: bug is understood, fix is verified, regression is prevented
 - For existing failing CI tests: go fix them without being told how
+- **Exceptions / stack traces:** follow `debugging.md` — recreate the request and the nil/missing data in a spec, watch it raise, then fix. Do not patch the view first.
 
 ### 7. Atomic Commits
 - Prefer smaller, logical commits over one large commit
@@ -172,6 +173,7 @@ Detailed guides for specific technologies:
 - **`llm-as-a-verifier/`** (this directory) — Continuous, probabilistic verification: `select` best-of-N, `compare` pairs, `track` progress. Used by steps 9-10 above to rank candidate implementations and monitor long refactors.
 - **`hotwire.md`** (in this directory) — Stimulus controllers, Turbo Frames/Streams, registration in application.js
 - **`stimulus.md`** (in this directory) — Advanced Stimulus patterns: lifecycle hooks, controller composition via outlets, nested controllers, form patterns, testing, performance. For basics see `hotwire.md`.
+- **`debugging.md`** (in this directory) — Reproduce a stack trace (NoMethodError, 500) as a failing request spec before changing application code.
 - **`view-component.md`** (in this directory) — ViewComponent gem: file layout, slots, sidecar assets, variants/sizes, Stimulus integration, preview/Lookbook, testing. Implements the contracts in the top-level `design-system/` skill.
 - **`crap.md`** (in this directory) — CRAP (Change Risk Anti-Patterns) triage: Savoia's comp² · (1 − cov/100)³ + comp score from RuboCop cyclomatic complexity × SimpleCov coverage; act per quadrant (spec the missing branches, extract the method) and escalate to mutation testing
 - **`mutation-testing.md`** (in this directory) — mutant (Ruby mutation testing): mutant-rspec setup, subject expressions, Rails hooks (eager load + per-worker DB isolation), incremental CI, alive-mutant handling, commercial-license notes
