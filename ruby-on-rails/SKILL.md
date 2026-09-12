@@ -147,6 +147,7 @@ end
 - `minimum_coverage` makes the suite exit non-zero below the threshold — wire this into CI so coverage regressions block merges.
 - Add `coverage/` to `.gitignore`.
 - Use coverage to find gaps, not to chase 100% — don't write tests for trivial accessors just to hit a number. The BDD bug-fix flow (section 6) is the source of truth for what to test.
+- Pair this gate with `crap.md` and `mutation-testing.md`: CRAP ranks which methods deserve the next specs; mutation testing verifies the existing specs actually assert. Neither is a default CI gate (runtime; mutant is subscription-priced for commercial use).
 
 ---
 
@@ -172,4 +173,6 @@ Detailed guides for specific technologies:
 - **`hotwire.md`** (in this directory) — Stimulus controllers, Turbo Frames/Streams, registration in application.js
 - **`stimulus.md`** (in this directory) — Advanced Stimulus patterns: lifecycle hooks, controller composition via outlets, nested controllers, form patterns, testing, performance. For basics see `hotwire.md`.
 - **`view-component.md`** (in this directory) — ViewComponent gem: file layout, slots, sidecar assets, variants/sizes, Stimulus integration, preview/Lookbook, testing. Implements the contracts in the top-level `design-system/` skill.
+- **`crap.md`** (in this directory) — CRAP (Change Risk Anti-Patterns) triage: Savoia's comp² · (1 − cov/100)³ + comp score from RuboCop cyclomatic complexity × SimpleCov coverage; act per quadrant (spec the missing branches, extract the method) and escalate to mutation testing
+- **`mutation-testing.md`** (in this directory) — mutant (Ruby mutation testing): mutant-rspec setup, subject expressions, Rails hooks (eager load + per-worker DB isolation), incremental CI, alive-mutant handling, commercial-license notes
 - **`Notion.md`** — Notion API via curl for Product Backlog management (search, status updates, create pages)
