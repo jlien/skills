@@ -20,6 +20,7 @@ This repository contains specialized agent skills for various roles and workflow
 ### Frontend & Design
 
 - **design-system/** - Design tokens, component API conventions, accessibility baselines, and Tailwind mapping (framework-agnostic; basis for the Rails ViewComponent skill)
+- **hotwire-crud/** - Canonical admin CRUD: table index, row opens Show, Edit/Delete in the last column, Show edits via turbo-frame modal, nested records as tables on the parent
 - **tailwind/** - Tailwind CSS configuration, customization, composition patterns, and common pitfalls
 
 ### Marketing & Growth
