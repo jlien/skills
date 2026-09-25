@@ -31,8 +31,9 @@ LLMs writing English routinely bleed the target/foreign language in (or vice ver
 
 - Scan English-facing copy for CJK codepoints that aren't intentional (e.g. pinyin
   tone marks like `nǐ`, or simplified-Chinese hanzi like 鱼/这 in a Japanese-facing
-  page — Japanese uses traditional/kanji forms). Use the project's own checker where
-  one exists, e.g. Kōfuku's `bin/kofuku-check-chinese`.
+  page — Japanese uses traditional/kanji forms). Use the project's own checker
+  where one exists; otherwise grep for CJK ranges with the expected-language
+  allowlist in mind.
 - Scan Japanese-facing copy for romaji words that should be kana.
 - Confirm any *intentional* foreign terms are marked up consistently (tags, quotes, glosses).
 

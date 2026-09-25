@@ -61,12 +61,12 @@ Sitemap: https://example.com/sitemap.xml
 Publish a plain-Markdown file at `/llms.txt` describing the site for LLMs: a one-line site summary, then a curated list of key URLs with one-line descriptions (think "sitemap written for a model"). Optionally `/llms-full.txt` with the full text of priority pages inlined. Generate it from the same data that builds the sitemap.
 
 ```
-# Kōfuku — Japanese for travelers
-> Short bilingual reels teaching the exact phrases tourists need in Japan.
+# Acme — Japanese learning for travelers
+> Short bilingual lessons teaching the exact phrases tourists need in Japan.
 
 ## Phrases
-- https://example.com/videos/tourist-konbini: How to order hot food at a convenience store ("kore, kudasai")
-- https://example.com/videos/tourist-takkyubin: Forward your luggage hotel-to-hotel ("nimotsu o okuritai desu")
+- https://example.com/lessons/konbini: How to order hot food at a convenience store
+- https://example.com/lessons/takkyubin: Forward your luggage hotel-to-hotel
 ```
 
 ### Phase 5: Verify
