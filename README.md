@@ -7,6 +7,7 @@ This repository contains specialized agent skills for various roles and workflow
 ### Core Development
 
 - **Ruby-on-Rails.md** - Rails development with BDD, planning, and automated code review
+- **code-review/SKILL.md** - Agent-era review process (from the Claude Code team's practice): layered checks (verify-before-review, AI review, blocking security review, risk-tiered human approval), REVIEW.md guidance, findings protocol (Important/Nit/Pre-existing), convergence rules to break agent author/reviewer loops, and where humans stay in the loop
 - **ruby-on-rails/crap.md** - CRAP (Change Risk Anti-Patterns) triage: Savoia's comp² · (1 − cov/100)³ + comp score per method from RuboCop cyclomatic complexity + SimpleCov coverage, act per quadrant (spec missing branches, extract the method), escalate to mutation testing
 - **ruby-on-rails/mutation-testing.md** - mutant: Ruby mutation testing — mutant-rspec/rails config, subject expressions, Rails hooks (eager load + per-worker DB isolation), incremental CI discipline, handling alive mutants, commercial-license caveat
 - **Project-Management.md** - Blocker tracking, dependency management, and status updates
