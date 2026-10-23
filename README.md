@@ -38,7 +38,7 @@ This repository contains specialized agent skills for various roles and workflow
 
 ### Security
 
-- **security/web-pentest/** - Ethical-hacking agent for testing your own web apps: phased methodology (recon → surface mapping → OWASP Top 10 → report), an exhaustive local toolchain (`toolkit.md`), a concrete OWASP test checklist (`owasp-web-checklist.md`), and an evidence-based findings report (`report-template.md`). Guardrails first: written scope file, authorized targets only, no destructive payloads, rate-limited, verified findings. Complements the `code-review/SKILL.md` blocking security review — that covers code, this covers the running app
+- **security/web-pentest/** - Ethical-hacking agent for testing your own web apps: phased methodology (recon → surface mapping → OWASP Top 10 → APT-grade deep pass → report), an exhaustive local toolchain (`toolkit.md`), a concrete OWASP test checklist (`owasp-web-checklist.md`), state-actor tradecraft emulation — APT29/APT28/Lazarus patterns: edge-appliance CVE exposure, credential-attack realism, business-logic races, supply chain, exploit chains, detection validation (`apt-ttps.md`), and an evidence-based findings report (`report-template.md`). Guardrails first: written scope file, authorized targets only, no destructive payloads, rate-limited, verified findings. Complements the `code-review/SKILL.md` blocking security review — that covers code, this covers the running app
 
 ### Agent Workflow
 
