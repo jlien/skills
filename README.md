@@ -36,6 +36,10 @@ This repository contains specialized agent skills for various roles and workflow
 - **content/content-gap-analysis/** - SEO content gap analysis from live GSC/GA4 data (service-account auth, no CSV exports needed): clusters queries into topic groups, then flags missing content, striking-distance (pos 8-20), underperforming CTR vs the site's own position bands, and answer-style/AI-citation opportunities; outputs a prioritized cluster table + top-5 new pages + top-5 quick wins. Companion `gsc-ga4-data-access.md` holds the live-verified pull recipes (JWT auth, search-analytics + runReport endpoints, row caps)
 - **pagespeed/** - Run PageSpeed Insights / Lighthouse, read field (CrUX) Core Web Vitals before lab scores, and turn the results into a ranked fix list — with a companion `audit-triage.md` catalog that separates real, first-party, metric-moving findings from third-party / already-passing / negligible noise
 
+### Security
+
+- **security/web-pentest/** - Ethical-hacking agent for testing your own web apps: phased methodology (recon → surface mapping → OWASP Top 10 → report), an exhaustive local toolchain (`toolkit.md`), a concrete OWASP test checklist (`owasp-web-checklist.md`), and an evidence-based findings report (`report-template.md`). Guardrails first: written scope file, authorized targets only, no destructive payloads, rate-limited, verified findings. Complements the `code-review/SKILL.md` blocking security review — that covers code, this covers the running app
+
 ### Agent Workflow
 
 - **Agent-Writing-System.md** - Orwell's six rules from "Politics and the English Language" (1946): short words, active voice, cut the fluff, fresh language, plain English. Paste into CLAUDE.md / AGENTS.md for instant writing quality.
