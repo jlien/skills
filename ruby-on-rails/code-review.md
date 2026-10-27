@@ -254,3 +254,15 @@ For each issue found:
 4. Rate severity: **critical** (security/data loss), **warning** (performance/bugs), **suggestion** (style/maintainability)
 
 Use RuboCop and Brakeman output to supplement manual review.
+
+### Agent-Era Review Discipline
+
+Per the `code-review/SKILL.md` process (distilled from the Claude Code team's practice):
+
+- **Show runnable evidence, not claims.** Before review, run the test suite / build / affected page and attach the actual output. Never accept "it works" without output.
+- **Fresh-context subagent reviews the diff** after implementation — the author agent doesn't review its own work.
+- **Tag every finding** `Important` / `Nit` / `Pre-existing`, so a bug the PR didn't introduce doesn't read as the author's fault. Drop style-only findings unless they touch the conventions above.
+- **Every finding gets answered**: fix it, or resolve with a one-line reason (how you clear a false positive). Nothing stays open at merge.
+- **Converge, don't loop.** Cap at 3 review rounds; after that, step back and reconsider the approach. Re-review only the new diff, flag the *class* of bug (fix every instance), and never repeat a finding already posted.
+- **Review depth scales with risk**: quick pass on routine changes, deep review where a missed bug is expensive (auth, billing, data migrations, CI workflow files). The change sets the tier, not the author.
+- When the reviewer keeps flagging the same thing across PRs, fix it at the source: add it to this checklist, a RuboCop cop, or the project's `REVIEW.md`.
