@@ -74,6 +74,7 @@ Orchestrates Rails development with extensive planning, principal engineer level
 - **Minimal Impact**: Changes should only touch what's necessary. Avoid introducing bugs.
 - **Rails Conventions**: Follow Rails way. Use generators. Leverage framework.
 - **Hotwire First**: Prefer Turbo Frames/Streams over custom JS. Stimulus for behavior.
+- **Paginate by default**: Index pages and nested resource lists never dump an unbounded `Model.all` into a table. Default page size **25**, 1-indexed `page` query param. Hide Previous/Next when there is only one page. Preserve filters and tab params on pager links. Request spec: 26 rows → page 1 omits row 26; page 2 includes it.
 
 ---
 

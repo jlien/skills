@@ -133,6 +133,24 @@ npm run build
 <% end %>
 ```
 
+### Resource tabs (own URL, swap a frame)
+
+Each tab is a real member route. Pills target a Turbo Frame and **advance** history so the address bar matches the resource. A full visit (refresh, bookmark) still renders the page chrome.
+
+```erb
+<%# Pills live inside the frame so the current tab updates with the swap. %>
+<%= link_to "People", people_platform_club_path(club),
+      data: { turbo_frame: "club_resource", turbo_action: "advance" } %>
+
+<%= turbo_frame_tag "club_resource" do %>
+  <%= render "people" %>
+<% end %>
+```
+
+Frame requests render `layout: false` and only the matching `turbo_frame_tag`. Pagination links use the same `turbo_frame` + `turbo_action: "advance"`.
+
+Do not use `?tab=` query params for this — that is a full-page filter, not a resource.
+
 ### Breaking Out of Frame
 
 ```erb
