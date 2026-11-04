@@ -1,0 +1,17 @@
+{
+  "prompt": {
+    "u": {"class_type": "UNETLoader", "inputs": {"unet_name": "flux1-dev-kontext_fp8_scaled.safetensors", "weight_dtype": "default"}},
+    "c": {"class_type": "DualCLIPLoader", "inputs": {"clip_name1": "clip_l.safetensors", "clip_name2": "t5xxl_fp8_e4m3fn_scaled.safetensors", "type": "flux"}},
+    "v": {"class_type": "VAELoader", "inputs": {"vae_name": "ae.safetensors"}},
+    "img0": {"class_type": "LoadImage", "inputs": {"image": "SRC_UPLOAD_NAME.png"}},
+    "scl0": {"class_type": "FluxKontextImageScale", "inputs": {"image": ["img0", 0]}},
+    "enc0": {"class_type": "VAEEncode", "inputs": {"pixels": ["scl0", 0], "vae": ["v", 0]}},
+    "pos": {"class_type": "CLIPTextEncode", "inputs": {"text": "EDIT_INSTRUCTION_HERE. For photoreal restyle add: photograph of a real person reimagined as human, natural skin texture, realistic hair strands, 85mm portrait lens, soft studio lighting, no text or logos anywhere. IMPORTANT: cfg is 1.0 so the negative branch is never sampled — put all steering (anti-anime wording, Avoid: lists) HERE in the positive text, not in neg.", "clip": ["c", 0]}},
+    "ref0": {"class_type": "ReferenceLatent", "inputs": {"conditioning": ["pos", 0], "latent": ["enc0", 0]}},
+    "neg": {"class_type": "CLIPTextEncode", "inputs": {"text": "INERT at cfg=1.0 (never sampled) - kept only for graph-shape compatibility; do not rely on this branch for steering", "clip": ["c", 0]}},
+    "gud": {"class_type": "FluxGuidance", "inputs": {"conditioning": ["ref0", 0], "guidance": 2.5}},
+    "ks": {"class_type": "KSampler", "inputs": {"seed": 773311, "steps": 30, "cfg": 1.0, "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0, "model": ["u", 0], "positive": ["gud", 0], "negative": ["neg", 0], "latent_image": ["enc0", 0]}},
+    "dec": {"class_type": "VAEDecode", "inputs": {"samples": ["ks", 0], "vae": ["v", 0]}},
+    "sv": {"class_type": "SaveImage", "inputs": {"filename_prefix": "image_gen", "images": ["dec", 0]}}
+  }
+}
