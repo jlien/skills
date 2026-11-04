@@ -50,6 +50,7 @@ This repository contains specialized agent skills for various roles and workflow
 - **goal/** - Long-horizon goal-mode persistence with `goal.md`, audit discipline, and budget awareness (modeled on Codex CLI's `/goal`)
 - **llm-as-a-verifier/** - Verification as a scaling axis: continuous, probabilistic scoring (`select` best-of-N, `compare` pairs, `track` progress) replaces coarse 1-5 judging; used to rank candidate implementations and monitor long refactors (arXiv 2607.05391)
 - **launch-qa/** - Launch QA via five simulated first-time users (impatient, skeptic, mobile, non-native English speaker, breaker): five parallel browser subagents walk landing → first success and screenshot every confusion, findings merge ranked by how many users hit each, one-pass fix, rerun to prove it
+- **dnc-complaint/** - File FTC Do Not Call registry complaints in bulk from spam-call screenshots: vision extraction of call-log rows, title-line contact screening, the verified donotcall.gov wizard field map (JS-driven AJAX, instant-submit step 2), and the silent-429 rate-limit trap with pacing and resume-from-JSON
 
 ## Usage
 
