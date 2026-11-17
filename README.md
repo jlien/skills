@@ -18,6 +18,7 @@ This repository contains specialized agent skills for various roles and workflow
 - **CTO.md** - Chief Technology Officer: technical strategy, architecture, and team leadership
 - **Product-Manager.md** - Product backlog management, requirements, and execution
 - **ai-transformation/** - AI-native transformation playbook for PE-backed companies, in the order that works: paid AI seats with budgets and daily-user champions (people), one source of truth and read-first agent access (data), one workflow with one owner and a dollar number, golden set, shadow mode, human approval on money and customers (workflows), single gateway with logs/budget/kill switch (guardrails), and small shipping teams where every PR gets the same checks (engineering). Skip the boring half and you end up with 40 pilots and nothing in production
+- **software-factory/** - The 10 parts of a software factory (Mar deHaym): intake with code-checkable acceptance criteria, human-approved spec, budgeted orchestrator, disposable sandbox, self-hosted model gateway, code-map context, CI-owned gates, git-versioned prompts with evals, session-to-epic measurement, and metadata-only seat tracking. Build the platform (gateway, measurement, gates, evals) before the agent; what stays with people (architecture, greenfield, big refactors, discovery) is named; rent-vs-own test: stop paying the vendor, does it keep running? Companion to `ai-transformation/`
 
 ### Frontend & Design
 
