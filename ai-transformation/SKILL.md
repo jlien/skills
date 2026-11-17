@@ -12,6 +12,8 @@ description: >
 
 One-line summary: **skip the boring half and you end up with 40 pilots and nothing in production.**
 
+Credit: this playbook comes from [Mar deHaym's post on X](https://x.com/mardehaym/status/2122456596483883466).
+
 The companies that get AI-native do it in this order: people, data, workflows, guardrails, engineering. The phases are sequenced on purpose — workflows can't move until data agrees with itself, and nothing ships until a person approves it.
 
 ## Phase 1 — The People
