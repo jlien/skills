@@ -17,6 +17,7 @@ This repository contains specialized agent skills for various roles and workflow
 - **CPO.md** - Chief Product Officer: strategic direction, market analysis, and roadmap
 - **CTO.md** - Chief Technology Officer: technical strategy, architecture, and team leadership
 - **Product-Manager.md** - Product backlog management, requirements, and execution
+- **ai-transformation/** - AI-native transformation playbook for PE-backed companies, in the order that works: paid AI seats with budgets and daily-user champions (people), one source of truth and read-first agent access (data), one workflow with one owner and a dollar number, golden set, shadow mode, human approval on money and customers (workflows), single gateway with logs/budget/kill switch (guardrails), and small shipping teams where every PR gets the same checks (engineering). Skip the boring half and you end up with 40 pilots and nothing in production
 
 ### Frontend & Design
 
