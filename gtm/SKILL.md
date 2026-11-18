@@ -160,7 +160,7 @@ Signals is deliberately the largest section: collect inputs broadly, act narrowl
 
 ## Companion Skills
 
-One companion `.md` per section of the tree (AEO is already covered by `content/aio/`). `SKILL.md` is the map; each companion file is the operating playbook for its section:
+One companion `.md` per section of the tree — 13 files (AEO is already covered by `content/aio/` and gets none). `SKILL.md` is the map; each companion file is the operating playbook for its section:
 
 | File | Covers | One-liner |
 |---|---|---|
