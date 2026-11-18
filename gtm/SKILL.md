@@ -158,6 +158,28 @@ Signals is deliberately the largest section: collect inputs broadly, act narrowl
 - **Promote leaves into skills.** When a leaf has a proven, repeatable procedure, write it as a companion `.md` file in this directory and link it from the leaf. The tree grows the same way `ruby-on-rails/` grew: entry point first, sub-skills as they earn their place.
 - **Leaves already covered elsewhere in this repo:** AEO → `content/aio/`, "SEO basics" → `seo/`, "Search ads" → `content/paid-ads/`. Check those before writing a new companion file.
 
+## Companion Skills
+
+One companion `.md` per section of the tree (AEO is already covered by `content/aio/`). `SKILL.md` is the map; each companion file is the operating playbook for its section:
+
+| File | Covers | One-liner |
+|---|---|---|
+| `revops.md` | RevOps | One CRM as the record, signal routing, scheduled enrichment, weekly deal reviews, loss reasons |
+| `icp-and-tam.md` | ICP and TAM | ICP from closed-won evidence, segments, personas, lookalikes, one account list |
+| `signals.md` | Signals | 11 signal types, each with source, filter, and attached action |
+| `scoring.md` | Scoring | Fit × intent → tiers, with decay and hot/warm/cold routing |
+| `data-and-enrichment.md` | Data and enrichment | Email waterfall, verification, mobile data reserved for the top tier |
+| `outbound.md` | Outbound | Sending infrastructure, first line per signal, 1 test per round, reply routing |
+| `inbound-and-pipeline.md` | Inbound and pipeline | Inbound enrichment, meeting prep, product signups, event attendees, closed-lost revival |
+| `content.md` | Content | Founder posts, buyer questions from calls, newsletter, clips, gated templates |
+| `abm-and-paid-ads.md` | ABM and paid ads | Account-list audiences, 1-to-1 ads, retargeting, intent feedback loop |
+| `partnerships.md` | Partnerships | Warm intros, referrals, revenue share, marketplaces, shared accounts |
+| `community.md` | Community | Podcasts, dinners, launches, paid communities, Slack/Discord |
+| `ai-agents.md` | AI agents | The five agents (scoring, pre-call research, signal-to-sequence, copy, action items) with the human-at-conversion rule |
+| `reporting.md` | Reporting | The six metrics, their thresholds, and the weekly slot where decisions get made |
+
+Cross-file references use the bare filename convention (see repo `CLAUDE.md`).
+
 ## Decision Framework
 
 - **Which motion next?** The one whose reporting metric is currently weakest, upstream of the revenue number you need. Score decay and reply rate fail before pipeline does.
