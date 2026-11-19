@@ -86,6 +86,7 @@ Output a gap list ranked by impact.
 - **`technical-edge-cases` sub-skill** — companion for edge case audits. Run after the standard SEO audit if rankings are flat. Covers parameter handling, JS rendering, infinite scroll, mixed content, tracking params, and charset issues.
 - **`indexing-and-freshness` sub-skill** — after Tier-1 crawl infra, to speed up discovery/recrawl: IndexNow (Bing/Yandex; Google isn't a participant), the dead sitemap-ping / Indexing-API myths, honest `lastmod`, and video sitemaps (`<video:video>`). Run when the site publishes frequently.
 - **`thin-page-audit` sub-skill** — when pages are crawled but **not indexed** ("Crawled/Discovered – currently not indexed"). Measure per-template main-content words + unique-text coverage, then thicken the thin templates (transcripts, FAQ, unique prose). Run when a large templated section has a low indexed-count.
+- **`search-engine-submission` sub-skill** — the first-time/launch-day act: which submission channel exists per engine (GSC, IndexNow bulk, Brave's submit-url, Apple's robots-only path) and the bulk-initial-submission playbook. Run once for a new site or section; hand off to `indexing-and-freshness` for steady-state pings.
 
 ## Key Principles
 
