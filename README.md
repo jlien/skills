@@ -59,6 +59,10 @@ This repository contains specialized agent skills for various roles and workflow
 - **launch-qa/** - Launch QA via five simulated first-time users (impatient, skeptic, mobile, non-native English speaker, breaker): five parallel browser subagents walk landing → first success and screenshot every confusion, findings merge ranked by how many users hit each, one-pass fix, rerun to prove it
 - **dnc-complaint/** - File FTC Do Not Call registry complaints in bulk from spam-call screenshots: vision extraction of call-log rows, title-line contact screening, the verified donotcall.gov wizard field map (JS-driven AJAX, instant-submit step 2), and the silent-429 rate-limit trap with pacing and resume-from-JSON
 
+### 3D Printing
+
+- **3d-printing/** - Programmatic mesh CAD without CAD software: parse STL/3MF, measure real geometry in a derived design frame, build mating parts (flanges, enclosures, bolt bosses) with trimesh + manifold3d booleans, verify by numeric clash checks before handoff. Includes `case-study-rack-enclosure.md` (3-iteration bolt-down tub build with iteration log) and `destaco-rack-reference.md` (measured geometry of the rack the case study used, for future lid/panel work).
+
 ## Usage
 
 These skills are designed to be read by AI agents to understand role-specific responsibilities, workflows, and best practices. Each skill provides:
