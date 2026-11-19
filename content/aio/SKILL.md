@@ -1,5 +1,5 @@
 ---
-trigger: AIO, AEO, answer engine optimization, AI optimization, LLM SEO, get cited by ChatGPT, Perplexity, Google AI Overviews, llms.txt, AI crawlers, GPTBot
+trigger: AIO, AEO, answer engine optimization, AI optimization, LLM SEO, get cited by ChatGPT, Perplexity, Google AI Overviews, llms.txt, AI crawlers, GPTBot, measure AI visibility, LLM rank tracking, AI referral traffic
 ---
 
 # AIO — AI / Answer-Engine Optimization
@@ -74,6 +74,8 @@ Publish a plain-Markdown file at `/llms.txt` describing the site for LLMs: a one
 - Fetch pages as the bots do: `curl -A "PerplexityBot" <url>` and confirm full content renders server-side (no JS gate).
 - Confirm `robots.txt` allows the intended agents; check server logs for `GPTBot`/`PerplexityBot`/`OAI-SearchBot` hits over the following weeks.
 - Ask the assistants directly ("How do you say X in Japanese?") and watch for your domain appearing as a cited source; iterate on the answer block where it doesn't.
+
+For ongoing measurement — citation-rate tracking, AI referral traffic, crawler coverage, share-of-voice — see the **`measurement.md`** sub-skill. Optimize here; track there.
 
 ## Decision Framework
 
