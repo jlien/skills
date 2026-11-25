@@ -32,6 +32,22 @@ The rule is simple: if code can check it, code does it. An agent saying "the tes
 9. **Measurement.** Every change connects the session, commit, pull request, ticket and epic, so you can see what a feature cost and how long it took. Report this by team, never as a ranking of individual developers.
 10. **The seats.** Engineers' own AI tools connect directly to their vendors. Track that usage through metadata only: who uses what and what it costs. No prompts or code.
 
+## Companion Skills
+
+Each companion file takes one layer of the factory and turns it into an audit-ready checklist (source: [Mar deHaym's readiness checklist](https://x.com/mardehaym/status/2125319432432157152) — the 125 items an AI software factory needs before it opens a PR on real code). Use this page for the architecture and a companion when building or auditing that layer.
+
+| File | Covers | One-liner |
+| --- | --- | --- |
+| `factory-intake.md` | Parts #1–2 | Self-contained tickets, the vague-ticket gate, approved spec and plan, chunking to one run. |
+| `factory-runs.md` | Parts #3–4 | Idempotent verified triggers, fresh-clone repos, disposable sandboxes, branch locks, hard run budgets, kill switch, dry-run. |
+| `factory-gateway.md` | Part #5 | One self-hosted gateway, scoped keys with budgets, config-driven models, provider fallback, cost per merged PR. |
+| `factory-security.md` | Gates | Data hygiene, secret blocking, prompt-injection defenses, supply-chain checks, tenant isolation, audit trail, incident plan. |
+| `factory-verification.md` | Part #7 | CI as judge, tests from acceptance criteria, quote-the-line review agent, earned per-repo autonomy. |
+| `factory-evals.md` | Part #8 | Prompts in git, golden set reruns, one-failure blocks, ugly-case coverage, prompt-version tracing. |
+| `factory-observability.md` | Part #9 | Full self-hosted traces, session-to-epic chain, checkpoints, cycle time without leaderboards. |
+| `factory-ops.md` | Parts #6, #10 | Adapters, seat policy, factory-as-product discipline, reviewer rotation, named owner, company-owned accounts. |
+| `factory-roles.md` | People | The 13 human roles the factory still needs, each mapped to the failure mode it owns. |
+
 ## What Doesn't Qualify
 
 - Giving every engineer an AI coding tool is useful, but that alone won't take a ticket from intake to merge.
