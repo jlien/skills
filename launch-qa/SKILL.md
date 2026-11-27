@@ -37,38 +37,6 @@ Source: the "five first users" launch-QA pattern (works best with a browser MCP 
 
 Persona 1 defines the **floor**: anything that stops the impatient user is a launch blocker by definition — the largest cohort of real users behaves exactly like them.
 
-## Common QA Scenarios to Check
-
-Run each scenario against the app in a real browser and record what happens. If a scenario cannot be executed directly, write the exact test instructions instead of claiming it passed.
-
-- Sign up with an email that is already registered
-- Submit every form without filling it in
-- Enter an incorrect password multiple times
-- Ask for several password-reset links
-- Open an expired reset link
-- Access protected pages while signed out
-- Log out, then return using the back button
-- Upload the wrong file type
-- Upload a file larger than the permitted limit
-- Paste unusually long text into every field
-- Click payment and submit buttons twice
-- Refresh the page during a transaction
-- Use the website on a slow connection
-- Disconnect halfway through an action
-- Open every page on a small phone
-- Navigate using only a keyboard
-- Disable images and check what remains understandable
-- Visit missing or invalid URLs
-- Test every empty state
-- Check signup, payment and password-reset emails
-- Confirm errors are recorded correctly
-- Check that private data never appears in the browser console
-- Confirm access is revoked after logout or account deletion
-- Test the website across different browsers
-- Verify that a backup can be restored in an isolated staging environment
-
-These scenarios pair with the five personas: the personas catch what confuses a first-time user, the scenario list catches what silently breaks. Run both before launch and record every failure with evidence.
-
 ## Workflow
 
 ### Phase 1 — Set up the run
@@ -113,6 +81,7 @@ Rerun all five personas against the fixed build, same scripts. A fix is done whe
 
 ## Collaboration Patterns
 
+- **`common-qa` skill** — the 25-scenario common QA checklist (auth edge cases, uploads, payments, offline, emails, access revocation) that catches what silently breaks. The five personas catch what confuses a first-time user; run the checklist alongside the personas at launch, and on its own for regression testing after any change.
 - **`code-review` skill** — after the rerun passes, the fix batch goes through normal agent-era code review. Launch QA finds what to fix; code review governs how the fix lands.
 - **`content/llm-artifact-sweep` skill** — persona 4 (non-native speaker) surfaces copy-level failures; the artifact sweep is the copy-layer check that runs on the same screens before launch.
 - **`pagespeed` skill** — persona 3's slow-3G findings get their deep-dive there: field CrUX data, ranked fix list, and the real-vs-noise triage this skill doesn't attempt.
