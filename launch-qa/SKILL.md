@@ -81,6 +81,7 @@ Rerun all five personas against the fixed build, same scripts. A fix is done whe
 
 ## Collaboration Patterns
 
+- **`common-qa` skill** — the 25-scenario common QA checklist (auth edge cases, uploads, payments, offline, emails, access revocation) that catches what silently breaks. The five personas catch what confuses a first-time user; run the checklist alongside the personas at launch, and on its own for regression testing after any change.
 - **`code-review` skill** — after the rerun passes, the fix batch goes through normal agent-era code review. Launch QA finds what to fix; code review governs how the fix lands.
 - **`content/llm-artifact-sweep` skill** — persona 4 (non-native speaker) surfaces copy-level failures; the artifact sweep is the copy-layer check that runs on the same screens before launch.
 - **`pagespeed` skill** — persona 3's slow-3G findings get their deep-dive there: field CrUX data, ranked fix list, and the real-vs-noise triage this skill doesn't attempt.
